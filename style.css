@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@100;200;300;400;500;600;700&display=swap");
+
+/* @font-face {
+  font-family: "test";
+  src: url("./fonts/Kalnia-VariableFont_wdth\,wght.ttf");
+} */
+body {
+  font-family: "Kalnia", serif;
+}
+
+h1 {
+  font-weight: 300;
+  color: red;
+}
+h1:hover {
+  color: blue;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  box-sizing: border-box;
+  margin: 10px;
+  /* transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-delay: 0.2s; */
+  /* transition: all 0.3s linear 0.2s; */
+  animation-name: myMove;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+/* .box:hover {
+  width: 200px;
+  background-color: blue;
+} */
+
+.flag {
+  width: 200px;
+  position: absolute;
+  animation-name: flag;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes myMove {
+  0% {
+    background-color: red;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    transform: rotate(180deg);
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+    border-radius: 60px;
+  }
+  100% {
+    background-color: green;
+    left: 400px;
+    top: 400px;
+    border-radius: 50%;
+  }
+}
+
+@keyframes flag {
+  0% {
+    background-color: red;
+    right: 0;
+  }
+  50% {
+    background-color: blue;
+    right: 200px;
+  }
+  100% {
+    background-color: green;
+    right: 400px;
+  }
+}
